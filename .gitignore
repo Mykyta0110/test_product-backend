@@ -1,0 +1,70 @@
+# Python-specific #
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.env
+*.venv
+venv/
+ENV/
+env/
+venv.bak/
+*.egg
+*.egg-info/
+.eggs/
+
+# FastAPI-specific #
+*.log
+*.db
+*.sqlite3
+instance/
+secrets/
+.env.*
+
+# IDEs and editors #
+.idea/
+.vscode/
+*.swp
+*.swo
+*.swn
+*.swm
+
+# Pytest cache #
+.pytest_cache/
+.coverage
+.tox/
+.nox/
+.cache/
+pytestdebug.log
+
+# Mypy #
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Build #
+build/
+dist/
+*.egg-info/
+*.eggs/
+*.whl
+
+# Docker #
+docker-compose.override.yml
+.dockerignore
+
+# Jupyter Notebooks #
+.ipynb_checkpoints
+
+# OS-specific #
+.DS_Store
+Thumbs.db
+
+# Miscellaneous #
+*.bak
+*.tmp
+*.temp
+*.pid
+*.seed
+*.backup
+*.log.*

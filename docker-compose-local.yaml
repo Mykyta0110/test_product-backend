@@ -1,0 +1,18 @@
+version: "3.0"
+services:
+  db:
+    container_name: "db_products"
+    image: postgres:16.3
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=Admin
+      - POSTGRES_DB=products
+    ports:
+      - "5432:5432"
+    networks:
+      - custom
+
+networks:
+  custom:
+    driver: bridge
