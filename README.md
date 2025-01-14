@@ -52,3 +52,15 @@ Notes and Troubleshooting
     For any issues with migrations, double-check the settings in /alembic.ini and /settings.py.
 
 Feel free to reach out for support if you encounter any problems during setup.
+
+Add sql script with data
+INSERT INTO products (id, name, price)
+VALUES
+    (1, 'Laptop', 1200),
+    (2, 'Headphones', 80),
+    (3, 'Keyboard', 45),
+    (4, 'Mouse', 25),
+    (5, 'Monitor', 200);
+
+
+
