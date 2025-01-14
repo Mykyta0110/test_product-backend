@@ -1,6 +1,54 @@
-# How to run project
-1.create venv (python -m venv .venv)
-2.pip install -r requirements.txt
-3.you need to change db credentials your admin name/password in /alembic.ini and /settings.py for postgress
-4.To up your docker you need to install choco make (maybe you will need to install it with admin privileges) and write "make up" in terminal
-5.for set up migrations (alembic upgrade head) 
+# Project Setup
+
+## Prerequisites
+Before you begin, make sure you have the following installed on your system:
+- Python: Required for the virtual environment and project dependencies.
+- PostgreSQL: The project database.
+- Chocolatey: Required to install make.
+- Docker:
+
+---
+
+## Setup Instructions
+
+To set up and run the project, follow these steps:
+
+1. Create a Virtual Environment  
+   Create a Python virtual environment by running:
+   ```bash
+   python -m venv .venv
+
+Activate the virtual environment before proceeding.
+
+    Install Project Dependencies
+    With the virtual environment activated, install the required Python packages:
+
+pip install -r requirements.txt
+
+Configure Database Credentials
+Update your PostgreSQL credentials in the following files:
+
+    /alembic.ini: Replace the placeholders with your admin username and password.
+    /settings.py: Ensure the database connection settings are accurate.
+
+Install and Start Docker
+Install make using Chocolatey. This step may require admin privileges:
+
+choco install make
+
+Once installed, start the Docker containers with:
+
+make up
+
+Apply Migrations
+Set up the database schema by applying migrations:
+
+    alembic upgrade head
+
+Notes and Troubleshooting
+
+    If the make command is not found, ensure Chocolatey and make are correctly installed and added to your system PATH.
+    Verify your PostgreSQL configuration if you encounter database connection issues.
+    For any issues with migrations, double-check the settings in /alembic.ini and /settings.py.
+
+Feel free to reach out for support if you encounter any problems during setup.
