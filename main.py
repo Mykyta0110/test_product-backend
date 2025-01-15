@@ -4,6 +4,8 @@ from fastapi.routing import APIRouter
 import settings
 from api.handlers import product_router
 from fastapi.middleware.cors import CORSMiddleware
+
+
 app =  FastAPI(title="products-backend")
 
 main_api_router = APIRouter()
@@ -30,4 +32,4 @@ app.add_middleware(
 
 if __name__ == "__main__":  
     # run app on the host and port
-    uvicorn.run(app, host="127.0.0.1", port=settings.APP_PORT)
+    uvicorn.run(app, host="0.0.0.0", port=settings.APP_PORT)

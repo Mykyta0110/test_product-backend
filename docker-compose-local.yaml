@@ -13,6 +13,19 @@ services:
     networks:
       - custom
 
+  backend:
+    container_name: "backend"
+    build:
+      context: .
+      dockerfile: DockerFile
+    restart: always
+    ports:
+      - "8000:8000"
+    networks:
+      - custom
+    depends_on:
+      - db
+
 networks:
   custom:
     driver: bridge
