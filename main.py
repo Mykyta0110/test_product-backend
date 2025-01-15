@@ -16,7 +16,7 @@ main_api_router.include_router(product_router, prefix="/product", tags=["product
 app.include_router(main_api_router)
 
 origins = [
-    "https://test-product-frontend.onrender.com/"
+    "https://test-product-frontend.onrender.com"
     
 ]
 
