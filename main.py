@@ -16,8 +16,8 @@ main_api_router.include_router(product_router, prefix="/product", tags=["product
 app.include_router(main_api_router)
 
 origins = [
-    "http://localhost:3000",
-    "http://127.0.0.1:3000",
+    "https://test-product-frontend.onrender.com/"
+    
 ]
 
 
