@@ -13,17 +13,8 @@ Before you begin, make sure you have the following installed on your system:
 
 To set up and run the project, follow these steps:
 
-1. Create a Virtual Environment  
-   Create a Python virtual environment by running:
-   ```bash
-   python -m venv .venv
 
-Activate the virtual environment before proceeding.
 
-    Install Project Dependencies
-    With the virtual environment activated, install the required Python packages:
-
-pip install -r requirements.txt
 
 Configure Database Credentials
 Update your PostgreSQL credentials in the following files:
@@ -40,10 +31,9 @@ Once installed, start the Docker containers with:
 
 make up
 
-Apply Migrations
-Set up the database schema by applying migrations:
 
-    alembic upgrade head
+
+  
 
 Notes and Troubleshooting
 
@@ -51,11 +41,12 @@ Notes and Troubleshooting
     Verify your PostgreSQL configuration if you encounter database connection issues.
     For any issues with migrations, double-check the settings in /alembic.ini and /settings.py.
 
+    You will need to update cors in main.py if you run locally 
+   
+   
 Feel free to reach out for support if you encounter any problems during setup.
 
 
-    (4, 'Mouse', 25),
-    (5, 'Monitor', 200);
-
+    
 
 
